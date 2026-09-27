@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +43,7 @@ keywords: [
       "Modern websites, landing pages, and website redesigns built to help brands show up better online.",
     images: [
       {
-        url: "/designs-haven-hero.png",
+        url: "/designs-haven-hero.web",
         width: 1200,
         height: 630,
         alt: "Designs Haven Web Design Studio",
@@ -56,7 +57,7 @@ keywords: [
     title: "Designs Haven | Web Design Studio",
     description:
       "Modern websites, landing pages, and website redesigns built to help brands show up better online.",
-    images: ["/designs-haven-hero.png"],
+    images: ["/designs-haven-hero.webp"],
   },
 };
 
@@ -66,7 +67,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <body className="min-h-full flex flex-col">
+  {children}
+  <Analytics />
+</body>
     </html>
   );
 }
