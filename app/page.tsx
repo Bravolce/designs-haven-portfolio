@@ -1,3 +1,6 @@
+const CONTRA_URL =
+  "https://contra.com/vincentobafemi26_9f330vn6/work?r=vincentobafemi26_9f330vn6";
+  
 const projects = [
   {
     number: "01",
@@ -6,7 +9,7 @@ const projects = [
     description:
   "A modern website experience for an interior design and construction brand, created to showcase their expertise, projects, and services while making it easier for potential clients to explore and enquire.",
     style: "light",
-    image: "/dexito-project.png",
+    image: "/dexito-project.webp",
      link: "https://dexito.in/"
   },
   {
@@ -16,19 +19,41 @@ const projects = [
     description:
       "A modern footwear website designed to showcase Carbon's collections, product quality, and wholesale offering through a bold, premium shopping experience.",
     style: "burgundy",
-    image: "/carbon-footwear.png",
+    image: "/carbon-footwear.webp",
+  },
+];
+const heroConcepts = [
+  {
+    number: "01",
+    name: "NYRÉ",
+    category: "Hair & Beauty",
+    image: "/nyre-hero-concept.webp",
+  },
+  {
+    number: "02",
+    name: "Vale & Form",
+    category: "Fashion / Lifestyle",
+    image: "/vale-form-hero-concept.webp",
   },
   {
     number: "03",
-    name: "Selected Redesign",
-    category: "Website Redesign",
-    description:
-      "A complete visual refresh focused on stronger first impressions, clearer messaging, improved trust, and better conversion potential.",
-    style: "gold",
-    image: "/h-nieves-redesign.jpg",
+    name: "Bunvolt",
+    category: "Food & Hospitality",
+    image: "/bunvolt-hero-concept.webp",
+  },
+  {
+    number: "04",
+    name: "Elara Journeys",
+    category: "Travel & Hospitality",
+    image: "/elara-hero-concept.webp",
+  },
+  {
+    number: "05",
+    name: "Ardo Timepieces",
+    category: "Luxury / Watches",
+    image: "/ardo-hero-concept.webp",
   },
 ];
-
 const services = [
   {
     number: "01",
@@ -77,36 +102,6 @@ export default function Home() {
   return (
     <main className="overflow-hidden bg-white text-[#0A0A0A]">
       {/* NAVIGATION */}
-      <header className="relative z-50 mx-auto flex max-w-[1500px] items-center justify-between px-6 py-6 md:px-10 lg:px-14">
-        <a
-          href="#"
-          className="text-lg font-semibold tracking-[-0.05em] md:text-xl"
-        >
-          DESIGNS HAVEN<span className="text-[#B08D57]">.</span>
-        </a>
-
-        <nav className="hidden items-center gap-8 text-sm lg:flex">
-          <a href="#work" className="nav-link">
-            Work
-          </a>
-          <a href="#services" className="nav-link">
-            Services
-          </a>
-          <a href="#about" className="nav-link">
-            About
-          </a>
-          <a href="#process" className="nav-link">
-            Process
-          </a>
-        </nav>
-
-        <a
-          href="#contact"
-          className="rounded-full bg-[#0A0A0A] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#6B1F2B]"
-        >
-          Start a project
-        </a>
-      </header>{/* NAVIGATION */}
 <header className="absolute left-0 top-0 z-50 w-full px-6 py-6 md:px-10 lg:px-14">
   <div className="mx-auto flex max-w-[1500px] items-center justify-between">
 
@@ -152,7 +147,9 @@ export default function Home() {
 
     {/* DESKTOP CTA */}
     <a
-      href="#contact"
+      href={CONTRA_URL}
+        target="_blank"
+  rel="noopener noreferrer"
       className="hidden rounded-full bg-[#0A0A0A] px-5 py-3 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#6B1F2B] lg:inline-flex"
     >
       Start a Project
@@ -205,7 +202,9 @@ export default function Home() {
           </a>
 
           <a
-            href="#contact"
+            href={CONTRA_URL}
+              target="_blank"
+  rel="noopener noreferrer"
             className="mt-6 flex items-center justify-between rounded-full bg-[#B08D57] px-5 py-4 font-medium text-[#0A0A0A] transition-colors hover:bg-[#D4B77D]"
           >
             Start a Project
@@ -224,7 +223,7 @@ export default function Home() {
 
     {/* LEFT CONTENT */}
     <div className="relative z-10">
-      <div className="mb-8 flex items-center gap-4">
+   <div className="mt-30 mb-8 flex items-center gap-4">
         <span className="h-[1px] w-10 bg-[#B08D57]" />
        <p className="reveal-up reveal-delay-1 text-xs font-medium uppercase tracking-[0.24em] text-black/50">
           Independent Web Design Studio
@@ -248,8 +247,8 @@ export default function Home() {
       </p>
 
       <a
-        href="#work"
-      className="reveal-up reveal-delay-3 group mt-9 inline-flex items-center gap-5 rounded-full bg-[#0A0A0A] px-6 py-4 text-sm font-medium text-white transition hover:bg-[#6B1F2B]"
+        href={CONTRA_URL}
+        className="reveal-up reveal-delay-3 group mt-9 inline-flex items-center gap-5 rounded-full bg-[#0A0A0A] px-6 py-4 text-sm font-medium text-white transition hover:bg-[#6B1F2B]"
       >
         Explore our work
         <span className="text-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -265,7 +264,7 @@ export default function Home() {
       <div className="absolute bottom-[10%] left-[10%] h-40 w-40 rounded-full bg-[#B08D57]/15 blur-3xl md:h-60 md:w-60" />
 
       <img
-        src="/designs-haven-hero.png"
+        src="/designs-haven-hero.webp"
         alt="Designs Haven creative web design studio"
         className="hero-visual relative z-10 w-full max-w-[850px] object-contain"
       />
@@ -449,7 +448,9 @@ export default function Home() {
   </a>
 ) : (
   <a
-    href="#contact"
+    href={CONTRA_URL}
+      target="_blank"
+  rel="noopener noreferrer"
     className="mt-12 inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]"
   >
     Start a Project
@@ -465,7 +466,182 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* HERO CONCEPTS */}
+<section className="bg-[#0A0A0A] px-6 py-24 text-white md:px-10 md:py-32 lg:px-14">
+  <div className="mx-auto max-w-[1500px]">
 
+    {/* INTRO */}
+    <div className="mb-16 grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+      <div>
+        <p className="mb-5 text-xs uppercase tracking-[0.22em] text-[#D4B77D]">
+          02 / Hero Concepts
+        </p>
+
+        <p className="max-w-sm text-sm leading-7 text-white/60">
+          A collection of hero concepts exploring how different brands can
+          create a stronger first impression from the very first screen.
+        </p>
+      </div>
+
+      <h2 className="max-w-5xl text-5xl font-medium leading-[0.92] tracking-[-0.055em] md:text-7xl lg:text-8xl">
+        One screen.
+        <br />
+        <span className="text-[#D4B77D]">
+          Five different worlds.
+        </span>
+      </h2>
+    </div>
+
+{/* FEATURED — NYRÉ */}
+<div className="group mx-auto mt-16 max-w-[1180px]">
+  <div className="mb-5 flex items-end justify-between gap-5">
+    <div>
+      <span className="text-xs text-[#D4B77D]">01</span>
+
+      <h3 className="mt-2 text-2xl font-medium">
+        NYRÉ
+      </h3>
+    </div>
+
+    <p className="text-right text-[10px] uppercase tracking-[0.18em] text-white/45">
+      Hair & Beauty
+    </p>
+  </div>
+
+  <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-2 md:p-3">
+    <img
+      src="/nyre-hero-concept.webp"
+      alt="NYRÉ hair and beauty website hero concept"
+      className="h-auto w-full rounded-[1.1rem] transition-transform duration-700 group-hover:scale-[1.015]"
+    />
+  </div>
+</div>
+
+
+{/* SECONDARY HERO CONCEPTS */}
+<div className="mx-auto mt-16 grid max-w-[1180px] gap-x-7 gap-y-14 md:grid-cols-2">
+
+  {/* VALE & FORM */}
+  <div className="group">
+    <div className="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <span className="text-xs text-[#D4B77D]">02</span>
+
+        <h3 className="mt-2 text-xl font-medium">
+          Vale & Form
+        </h3>
+      </div>
+
+      <p className="text-right text-[9px] uppercase tracking-[0.18em] text-white/45">
+        Fashion / Lifestyle
+      </p>
+    </div>
+
+    <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
+      <img
+        src="/vale-form-hero-concept.webp"
+        alt="Vale and Form fashion website hero concept"
+        loading="lazy"
+        className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
+      />
+    </div>
+  </div>
+
+
+  {/* BUNVOLT */}
+  <div className="group">
+    <div className="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <span className="text-xs text-[#D4B77D]">03</span>
+
+        <h3 className="mt-2 text-xl font-medium">
+          Bunvolt
+        </h3>
+      </div>
+
+      <p className="text-right text-[9px] uppercase tracking-[0.18em] text-white/45">
+        Food / Hospitality
+      </p>
+    </div>
+
+    <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
+      <img
+        src="/bunvolt-hero-concept.webp"
+        alt="Bunvolt food website hero concept"
+        loading="lazy"
+        className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
+      />
+    </div>
+  </div>
+
+
+  {/* ELARA JOURNEYS */}
+  <div className="group">
+    <div className="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <span className="text-xs text-[#D4B77D]">04</span>
+
+        <h3 className="mt-2 text-xl font-medium">
+          Elara Journeys
+        </h3>
+      </div>
+
+      <p className="text-right text-[9px] uppercase tracking-[0.18em] text-white/45">
+        Travel / Hospitality
+      </p>
+    </div>
+
+    <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
+      <img
+        src="/elara-hero-concept.webp"
+        alt="Elara Journeys travel website hero concept"
+        loading="lazy"
+        className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
+      />
+    </div>
+  </div>
+
+
+  {/* ARDO */}
+  <div className="group">
+    <div className="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <span className="text-xs text-[#D4B77D]">05</span>
+
+        <h3 className="mt-2 text-xl font-medium">
+          Ardo Timepieces
+        </h3>
+      </div>
+
+      <p className="text-right text-[9px] uppercase tracking-[0.18em] text-white/45">
+        Luxury / Watches
+      </p>
+    </div>
+
+    <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
+      <img
+        src="/ardo-hero-concept.webp"
+        alt="Ardo Timepieces luxury watch website hero concept"
+        loading="lazy"
+        className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
+      />
+    </div>
+  </div>
+
+</div>
+<div className="mt-14 flex justify-center md:mt-20">
+  <a
+    href={CONTRA_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-4 rounded-full bg-white px-8 py-4 text-sm font-medium text-black transition duration-300 hover:bg-[#B08D57] hover:text-white"
+  >
+    Build Your Website
+    <span>↗</span>
+  </a>
+</div>
+  </div>
+</section>
      {/* PHILOSOPHY */}
 <section className="bg-[#6B1F2B] px-6 py-24 text-white md:px-10 md:py-32 lg:px-14">
   <div className="mx-auto max-w-[1500px]">
@@ -993,13 +1169,6 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col items-start gap-4 text-sm">
-         <span>
-  Instagram ↗
-</span>
-
-<span>
-  LinkedIn ↗
-</span>
 
 <span>
   Contra ↗
