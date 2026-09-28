@@ -14,33 +14,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Designs Haven | Web Design Studio",
-  description:
-    "Designs Haven is an independent web design studio creating modern websites, landing pages, and website redesigns for brands and businesses.",
+ title: "Web Design Studio | Websites & Landing Pages | Designs Haven",
+description:
+  "Designs Haven is a web design studio creating modern websites, high-converting landing pages, and strategic website redesigns for brands and service businesses.",
 
 keywords: [
-  "web designer",
+ "web design studio",
+  "website design",
   "website designer",
-  "web designer near me",
-  "website designer near me",
-  "web designer in my location",
-  "professional web designer",
-  "web design services",
-  "website redesign",
+  "professional web design",
   "landing page design",
-  "web designer USA",
-  "website designer USA",
-  "web design services USA",
-  "web designer UK",
-  "website designer UK",
-  "web design services UK",
+  "website redesign",
+  "responsive web design",
+  "business website design",
+  "service business web design",
   "Designs Haven",
 ],
+metadataBase: new URL("https://designs-haven-portfolio.vercel.app"),
 
+alternates: {
+  canonical: "/",
+},
+
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+  },
+},
   openGraph: {
-    title: "Designs Haven | Web Design Studio",
-    description:
-      "Modern websites, landing pages, and website redesigns built to help brands show up better online.",
+  title: "Web Design Studio | Websites & Landing Pages | Designs Haven",
+description:
+  "Modern websites, high-converting landing pages, and strategic website redesigns for brands and service businesses.",
     images: [
       {
         url: "/designs-haven-hero.web",
@@ -51,13 +58,12 @@ keywords: [
     ],
     type: "website",
   },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Designs Haven | Web Design Studio",
-    description:
-      "Modern websites, landing pages, and website redesigns built to help brands show up better online.",
-    images: ["/designs-haven-hero.webp"],
+twitter: {
+  card: "summary_large_image",
+  title: "Web Design Studio | Websites & Landing Pages | Designs Haven",
+  description:
+    "Modern websites, high-converting landing pages, and strategic website redesigns for brands and service businesses.",
+  images: ["/designs-haven-hero.webp"],
   },
 };
 

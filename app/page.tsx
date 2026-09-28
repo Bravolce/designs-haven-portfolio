@@ -6,8 +6,8 @@ const projects = [
     number: "01",
     name: "D'Exito",
    category: "Interior Design / Construction",
-    description:
-  "A modern website experience for an interior design and construction brand, created to showcase their expertise, projects, and services while making it easier for potential clients to explore and enquire.",
+  description:
+  "A modern website design for an interior design and construction brand, built to showcase its expertise, projects, and services while creating a clear path for potential clients to explore and enquire.",
     style: "light",
     image: "/dexito-project.webp",
      link: "https://dexito.in/"
@@ -16,8 +16,8 @@ const projects = [
     number: "02",
     name: "Carbon Footwear",
     category: "E-commerce / Web Design",
-    description:
-      "A modern footwear website designed to showcase Carbon's collections, product quality, and wholesale offering through a bold, premium shopping experience.",
+  description:
+  "A modern e-commerce website design for Carbon Footwear, created to showcase its collections, product quality, and wholesale offering through a bold, responsive, and premium shopping experience.",
     style: "burgundy",
     image: "/carbon-footwear.webp",
   },
@@ -59,19 +59,19 @@ const services = [
     number: "01",
     title: "Website Design",
     description:
-      "Modern websites designed around your brand, audience, and business goals.",
+  "Modern, responsive websites designed around your brand, audience, and business goals to create a stronger online presence.",
   },
   {
     number: "02",
     title: "Landing Pages",
     description:
-      "Focused landing pages created for campaigns, offers, products, and lead generation.",
+  "High-converting landing pages designed for campaigns, offers, products, lead generation, and turning more visitors into enquiries.",
   },
   {
     number: "03",
     title: "Website Redesign",
     description:
-      "Transforming outdated websites into sharper, clearer, and more effective digital experiences.",
+  "Strategic website redesigns that transform outdated websites into faster, clearer, more responsive, and more effective digital experiences.",
   },
 ];
 
@@ -99,8 +99,55 @@ const process = [
 ];
 
 export default function Home() {
+  const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Designs Haven",
+  url: "https://designs-haven-portfolio.vercel.app",
+  description:
+    "Designs Haven is a web design studio creating modern websites, landing pages, and strategic website redesigns for brands and service businesses.",
+  serviceType: [
+    "Website Design",
+    "Landing Page Design",
+    "Website Redesign",
+  ],
+  areaServed: [
+  {
+    "@type": "Country",
+    name: "United States",
+  },
+  {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  {
+    "@type": "Country",
+    name: "Canada",
+  },
+  {
+    "@type": "Country",
+    name: "Australia",
+  },
+  {
+    "@type": "Country",
+    name: "Kuwait",
+  },
+  {
+    "@type": "Country",
+    name: "United Arab Emirates",
+  },
+],
+};
   return (
+<>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(structuredData),
+  }}
+/>
     <main className="overflow-hidden bg-white text-[#0A0A0A]">
+
       {/* NAVIGATION */}
 <header className="absolute left-0 top-0 z-50 w-full px-6 py-6 md:px-10 lg:px-14">
   <div className="mx-auto flex max-w-[1500px] items-center justify-between">
@@ -265,7 +312,7 @@ export default function Home() {
 
       <img
         src="/designs-haven-hero.webp"
-        alt="Designs Haven creative web design studio"
+        alt="Designs Haven web design studio portfolio showcase"
         className="hero-visual relative z-10 w-full max-w-[850px] object-contain"
       />
 
@@ -373,7 +420,7 @@ export default function Home() {
   <div className="group/image relative h-full w-full overflow-hidden rounded-[1.4rem]">
     <img
       src={project.image}
-      alt={`${project.name} website design`}
+      alt={`${project.name} website design project by Designs Haven`}
       className="h-full w-full object-cover transition-transform duration-700 group-hover/image:scale-[1.025]"
     />
 
@@ -511,7 +558,7 @@ export default function Home() {
   <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-2 md:p-3">
     <img
       src="/nyre-hero-concept.webp"
-      alt="NYRÉ hair and beauty website hero concept"
+      alt="NYRÉ hair and beauty website design concept by Designs Haven"
       className="h-auto w-full rounded-[1.1rem] transition-transform duration-700 group-hover:scale-[1.015]"
     />
   </div>
@@ -567,7 +614,7 @@ export default function Home() {
     <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
       <img
         src="/bunvolt-hero-concept.webp"
-        alt="Bunvolt food website hero concept"
+        alt="Bunvolt food and hospitality website design concept by Designs Haven"
         loading="lazy"
         className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
       />
@@ -594,7 +641,7 @@ export default function Home() {
     <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
       <img
         src="/elara-hero-concept.webp"
-        alt="Elara Journeys travel website hero concept"
+        alt="Elara Journeys travel website design concept by Designs Haven"
         loading="lazy"
         className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
       />
@@ -621,7 +668,7 @@ export default function Home() {
     <div className="overflow-hidden rounded-[1.35rem] border border-white/10 bg-white/[0.03] p-2">
       <img
         src="/ardo-hero-concept.webp"
-        alt="Ardo Timepieces luxury watch website hero concept"
+        alt="Ardo Timepieces luxury watch website design concept by Designs Haven"
         loading="lazy"
         className="h-auto w-full rounded-[1rem] transition-transform duration-700 group-hover:scale-[1.02]"
       />
@@ -963,27 +1010,27 @@ export default function Home() {
     <div className="border-t border-black/20 pt-12">
 
       <div className="overflow-hidden">
-        <h2 className="statement-line text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#0A0A0A] md:text-[11vw] lg:text-[8.5rem]">
+        <div className="statement-line text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#0A0A0A] md:text-[11vw] lg:text-[8.5rem]">
           DESIGN
-        </h2>
+        </div>
       </div>
 
       <div className="overflow-hidden">
-        <h2 className="statement-line ml-[7vw] text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-white md:text-[11vw] lg:text-[8.5rem]">
+        <div className="statement-line ml-[7vw] text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-white md:text-[11vw] lg:text-[8.5rem]">
           SHOULD
-        </h2>
+        </div>
       </div>
 
       <div className="overflow-hidden">
-        <h2 className="statement-line text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#0A0A0A] md:text-[11vw] lg:text-[8.5rem]">
+        <div className="statement-line text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#0A0A0A] md:text-[11vw] lg:text-[8.5rem]">
           NEVER FEEL
-        </h2>
+        </div>
       </div>
 
       <div className="overflow-hidden">
-        <h2 className="statement-line ml-[12vw] text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#6B1F2B] md:text-[11vw] lg:text-[8.5rem]">
+        <div className="statement-line ml-[12vw] text-[15vw] font-semibold leading-[0.78] tracking-[-0.075em] text-[#6B1F2B] md:text-[11vw] lg:text-[8.5rem]">
           INVISIBLE.
-        </h2>
+        </div>
       </div>
 
     </div>
@@ -1204,5 +1251,6 @@ export default function Home() {
   </div>
 </footer>
     </main>
-  );
+</>
+);
 }
