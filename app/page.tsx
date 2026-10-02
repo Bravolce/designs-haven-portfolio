@@ -60,6 +60,7 @@ const services = [
     title: "Website Design",
     description:
   "Modern, responsive websites designed around your brand, audience, and business goals to create a stronger online presence.",
+  href: "/services/website-design",
   },
   {
     number: "02",
@@ -794,7 +795,16 @@ export default function Home() {
             </span>
 
             <h3 className="text-3xl font-medium tracking-[-0.04em] transition-transform duration-300 group-hover:translate-x-2 md:text-4xl">
-              {service.title}
+              {service.href ? (
+  <a
+    href={service.href}
+    className="transition-opacity hover:opacity-60"
+  >
+    {service.title}
+  </a>
+) : (
+  service.title
+)}
             </h3>
 
             <p className="max-w-md leading-7 text-black/60">
